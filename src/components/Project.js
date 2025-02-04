@@ -1,6 +1,13 @@
 import Link from "next/link";
 
-const Project = ({ image, name, number, isFeatured = false, ...props }) => {
+const Project = ({
+  image,
+  name,
+  number = null,
+  date = null,
+  isFeatured = false,
+  ...props
+}) => {
   return (
     <div className="relative xl:h-[35rem] xl:self-end">
       <Link href="/portfolio">
@@ -12,17 +19,20 @@ const Project = ({ image, name, number, isFeatured = false, ...props }) => {
               "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(0, 0, 0, 0.50) 100%)",
           }}
         >
-          <div className="md:self-end xl:self-start">
-            <h4 className="text-[2rem] font-bold leading-10 mt-40 md:mt-0">
+          <div className="self-end xl:self-start">
+            <h4 className="text-[2rem] font-bold leading-10  md:mt-0">
               {name}
             </h4>
             {isFeatured && (
               <p className="text-lg leading-6 font-medium">View All Projects</p>
             )}
+            {date && <p className="text-lg leading-6 font-medium">{date}</p>}
           </div>
-          <span className="hidden md:block text-white/50 text-right text-[15.625rem] leading-[12rem] font-bold">
-            {number}
-          </span>
+          {number && (
+            <span className="hidden md:block text-white/50 text-right text-[15.625rem] leading-[12rem] font-bold">
+              {number}
+            </span>
+          )}
         </div>
       </Link>
     </div>

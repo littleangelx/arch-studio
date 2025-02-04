@@ -3,7 +3,7 @@ import Image from "next/image";
 const Button = ({ children, ...props }) => {
   return (
     <button
-      className="bg-dark-blue h-[4.5rem] text-white text-lg font-bold flex gap-6 justify-center items-center px-6"
+      className="bg-dark-blue hover:bg-dark-grey h-[4.5rem] text-white text-lg font-bold flex gap-6 justify-center items-center px-6"
       {...props}
     >
       {children}

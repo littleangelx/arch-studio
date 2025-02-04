@@ -1,7 +1,9 @@
+import Line from "./Line";
+
 const Welcome = () => {
   return (
     <div className="px-8 md:px-0 mb-28 md:mb-[14.5rem]">
-      <div className="md:hidden mt-[4.5rem] mb-[4.25rem] bg-light-grey w-16 h-[0.0625rem]" />
+      <Line />
       <div className="hidden md:block mt-10 relative top-12 xl:top-4 z-10">
         <h1 className="text-very-light-grey text-[7.5rem] xl:text-[15.625rem] font-bold leading-[12.5rem] z-10">
           Welcome

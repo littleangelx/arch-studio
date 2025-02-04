@@ -177,7 +177,7 @@ const ImageSlideshow = () => {
             (index) => (
               <button
                 key={index}
-                className="w-20 h-20 font-bold text-lg"
+                className="w-20 h-20 font-bold text-lg hover:bg-very-light-grey"
                 style={{
                   backgroundColor:
                     index === currentIndex + 1 ? "#1b1d23" : "#fff",
